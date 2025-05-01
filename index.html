@@ -1,30 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Palestine PFP Maker</title>
-  <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestine Profile Maker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="browser-warning">⚠️ Unsupported Browser Detected<br>Please open on regular browsers like Chrome or Safari.</div>
-
-  <div class="info-bar">🥺 52k killed in 565 days →</div>
-
-  <main class="container">
-    <h1>Show Solidarity <span>🇵🇸</span></h1>
-    <p class="subtext">Let's unite in our profile pictures to spotlight the cause. ✊</p>
-    <p><a class="guide-link" href="#">Watch the <strong>step-by-step guide</strong> 👀</a></p>
-
-    <div class="preview-wrapper">
-      <canvas id="canvas" width="400" height="400"></canvas>
+    <div class="container">
+        <h1>🇵🇸 Show Solidarity</h1>
+        <p>Let's unite in our profile pictures to spotlight the cause</p>
+        
+        <div class="editor">
+            <input type="file" id="upload" accept="image/*" hidden>
+            <label for="upload" class="upload-btn">Choose Photo</label>
+            
+            <div class="preview-container">
+                <canvas id="canvas"></canvas>
+                <img src="overlay.png" id="overlay" alt="palestine overlay">
+            </div>
+            
+            <button id="download" class="download-btn">Download Image</button>
+        </div>
+        
+        <p class="footer">Hosted with ❤️ on GitHub Pages</p>
     </div>
 
-    <input type="file" accept="image/*" id="upload" />
-    <button id="download">Download Image</button>
-  </main>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
