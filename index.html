@@ -3,27 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palestine Profile Maker</title>
+    <title>Free Palestine Profile Maker 🇵🇸</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🇵🇸 Show Solidarity</h1>
-        <p>Let's unite in our profile pictures to spotlight the cause</p>
+        <h1>🇵🇸 Stand With Palestine</h1>
+        <p class="subtitle">Customize your profile picture to show solidarity</p>
         
         <div class="editor">
-            <input type="file" id="upload" accept="image/*" hidden>
-            <label for="upload" class="upload-btn">Choose Photo</label>
-            
-            <div class="preview-container">
-                <canvas id="canvas"></canvas>
-                <img src="overlay.png" id="overlay" alt="palestine overlay">
+            <div class="toolbar">
+                <input type="file" id="upload" accept="image/*" hidden>
+                <label for="upload" class="btn upload-btn">
+                    <i class="fas fa-upload"></i> Choose Photo
+                </label>
+                
+                <div class="overlay-options">
+                    <div class="overlay-thumb active" data-overlay="overlay1.png"></div>
+                    <div class="overlay-thumb" data-overlay="overlay2.png"></div>
+                    <div class="overlay-thumb" data-overlay="overlay3.png"></div>
+                </div>
             </div>
-            
-            <button id="download" class="download-btn">Download Image</button>
+
+            <div class="preview-wrapper">
+                <div class="preview-container">
+                    <canvas id="canvas"></canvas>
+                    <img src="overlay1.png" id="overlay" class="draggable" alt="palestine overlay">
+                    <div class="loading-spinner"></div>
+                </div>
+                
+                <div class="controls">
+                    <button id="download" class="btn download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button id="reset" class="btn reset-btn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
         </div>
-        
-        <p class="footer">Hosted with ❤️ on GitHub Pages</p>
+
+        <div class="social-share">
+            <p>Share your support:</p>
+            <button class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="share-btn instagram">
+                <i class="fab fa-instagram"></i>
+            </button>
+            <button class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+            </button>
+        </div>
+
+        <p class="footer">Atz team with ❤️ | #FreePalestine</p>
     </div>
 
     <script src="script.js"></script>
