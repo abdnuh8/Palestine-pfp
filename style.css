@@ -1,0 +1,17 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+canvas {
+  border-radius: 50%;
+  background: #e0f7fa;
+}
